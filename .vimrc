@@ -39,7 +39,7 @@ colorscheme onedark
 filetype plugin indent on
 
 " See whitespace as special characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
 " Map Control+J/K to page down/up, simlar to j/k to move up and down
@@ -120,3 +120,7 @@ set autoread
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
 autocmd BufWritePre * %s/\s\+$//e
 
+" jk to exit insert mode
+inoremap jk <esc>
+" Disable esc to force usage of jk
+inoremap <esc> <nop>
