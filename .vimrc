@@ -132,3 +132,6 @@ inoremap <esc> <nop>
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+
+" Add familiar mapping Control-d to visually select the word under the cursor
+nnoremap <c-d> viw
