@@ -3,12 +3,13 @@ call plug#begin('~/.vim/plugged')
 
 " Control spaces/tabs and indentation via editorconfig files
 Plug 'editorconfig/editorconfig-vim'
-" File explorer
+" File explorer. Maybe remove? I don't use it...
 Plug 'scrooloose/nerdtree'
 " JavaScript syntax highlighting and indentation assistance
 Plug 'pangloss/vim-javascript'
 " Do I need this? Maybe? ihttps://github.com/pangloss/vim-javascript/issues/955
 Plug 'mxw/vim-jsx'
+
 " Include FZF
 Plug '/usr/local/opt/fzf'
 " Fuzzy File Finder to search through files in the directory tree via :Files
@@ -16,7 +17,11 @@ Plug '/usr/local/opt/fzf'
 " results in an FZF screen.
 Plug 'junegunn/fzf.vim'
 
+" Linting
 Plug 'vim-syntastic/syntastic'
+
+" Commenting and uncommenting code
+Plug 'scrooloose/nerdcommenter'
 
 " Monokai color scheme
 Plug 'sickill/vim-monokai'
@@ -124,3 +129,6 @@ autocmd BufWritePre * %s/\s\+$//e
 inoremap jk <esc>
 " Disable esc to force usage of jk
 inoremap <esc> <nop>
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
