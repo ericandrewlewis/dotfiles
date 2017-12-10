@@ -135,3 +135,6 @@ let g:NERDSpaceDelims = 1
 
 " Add familiar mapping Control-d to visually select the word under the cursor
 nnoremap <c-d> viw
+
+" Clear current search with /-Enter
+nnoremap /<CR> :let @/ = ""<CR>
