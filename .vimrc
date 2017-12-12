@@ -137,3 +137,9 @@ nnoremap /<CR> :let @/ = ""<CR>
 
 " Control-a to select all
 nnoremap <c-a> ggVG
+
+" Map Control-directional keys to navigate windows
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
