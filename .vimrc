@@ -43,7 +43,7 @@ colorscheme onedark
 " Enable filetype detection and plugin/indentation loading
 filetype plugin indent on
 
-" See whitespace as special characters
+" Show invisible characters (tab, end of line) a la TextMate
 set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
