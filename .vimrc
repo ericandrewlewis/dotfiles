@@ -47,10 +47,6 @@ filetype plugin indent on
 set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
-" Map Control+J/K to page down/up, simlar to j/k to move up and down
-nnoremap <c-j> <c-f>
-nnoremap <c-k> <c-b>
-
 let mapleader = ","
 
 if !exists(':Vimrc')
@@ -138,3 +134,6 @@ nnoremap <c-d> viw
 
 " Clear current search with /-Enter
 nnoremap /<CR> :let @/ = ""<CR>
+
+" Control-a to select all
+nnoremap <c-a> ggVG
