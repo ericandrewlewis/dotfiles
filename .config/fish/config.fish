@@ -13,5 +13,3 @@ set GOROOT /usr/local/opt/go/libexec
 set PATH $PATH $GOPATH/bin
 set PATH $PATH $GOROOT/bin
 set PATH /usr/local/opt/elasticsearch@1.7/bin $PATH
-
-set PATH /Applications/MacVim.app/Contents/bin $PATH
