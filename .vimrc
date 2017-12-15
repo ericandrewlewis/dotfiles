@@ -5,9 +5,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 " File explorer. Maybe remove? I don't use it...
 Plug 'scrooloose/nerdtree'
-" JavaScript syntax highlighting and indentation assistance
-Plug 'pangloss/vim-javascript'
-" Do I need this? Maybe? ihttps://github.com/pangloss/vim-javascript/issues/955
+" JavaScript syntax highlighting and indentation assistance. This includes
+" vim-javascript
 Plug 'mxw/vim-jsx'
 
 " Include FZF
@@ -17,28 +16,21 @@ Plug '/usr/local/opt/fzf'
 " results in an FZF screen.
 Plug 'junegunn/fzf.vim'
 
-" Linting
-Plug 'vim-syntastic/syntastic'
-
 " Commenting and uncommenting code
 Plug 'scrooloose/nerdcommenter'
 
-" Monokai color scheme
-Plug 'sickill/vim-monokai'
-
 " Atom OneDark color scheme clone
 Plug 'joshdick/onedark.vim'
+colorscheme onedark
 
 " Asynchronous Lint Engine
 " I can't use this until we update our ESLint dependencies, there's something
 " wrong with them.
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 call plug#end()
 
 " Enable syntax highlighting
 syntax on
-
-colorscheme onedark
 
 " Enable filetype detection and plugin/indentation loading
 filetype plugin indent on
@@ -93,20 +85,6 @@ set splitright
 
 nnoremap <leader>f :Files<CR>
 
-" Syntastic defaults
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-" Don't run syntax checking on quit
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['eslint']
-" Use local project's ESLint modules
-let g:syntastic_javascript_eslint_exec = '~/bin/eslint-wrapper-for-vim-syntastic'
-
 " Use vertical cursor in insert mode
 " https://ttssh2.osdn.jp/manual/en/usage/tips/vim.html#CursorStyle
 " Set cursor on entering insert mode
@@ -148,5 +126,17 @@ nnoremap <c-l> <c-w>l
 nnoremap <leader>n<tab> :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 
-" Show hidden files in NERDTree
 let NERDTreeShowHidden=1
+
+" Enable ESLint as the only JS linter, disabling a bunch of others
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\}
+
+" Enable ESLint as a fixer. Apply with :ALEFix
+let g:ale_fixers = {
+\ 'javascript': ['eslint'],
+\}
+
+" Enable JSX syntax highlighting in .js files
+let g:jsx_ext_required = 0
