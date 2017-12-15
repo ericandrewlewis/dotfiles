@@ -150,6 +150,3 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
-
-" Show hidden files in fzf, along with some other defaults
-set --export FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
