@@ -23,3 +23,6 @@ function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
 function ...... ; cd ../../../../.. ; end
 function ....... ; cd ../../../../../.. ; end
+
+" Show hidden files in fzf, along with some other defaults
+set --export FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
