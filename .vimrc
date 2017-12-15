@@ -147,3 +147,6 @@ nnoremap <c-l> <c-w>l
 " NERDTree shortcuts
 nnoremap <leader>n<tab> :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
