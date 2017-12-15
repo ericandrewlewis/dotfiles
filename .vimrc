@@ -21,13 +21,14 @@ Plug 'scrooloose/nerdcommenter'
 
 " Atom OneDark color scheme clone
 Plug 'joshdick/onedark.vim'
-colorscheme onedark
 
 " Asynchronous Lint Engine
 " I can't use this until we update our ESLint dependencies, there's something
 " wrong with them.
 Plug 'w0rp/ale'
 call plug#end()
+
+colorscheme onedark
 
 " Enable syntax highlighting
 syntax on
