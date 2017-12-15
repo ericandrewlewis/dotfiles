@@ -13,3 +13,13 @@ set GOROOT /usr/local/opt/go/libexec
 set PATH $PATH $GOPATH/bin
 set PATH $PATH $GOROOT/bin
 set PATH /usr/local/opt/elasticsearch@1.7/bin $PATH
+
+
+# Up-directory shortcut functions
+
+function ..    ; cd .. ; end
+function ...   ; cd ../.. ; end
+function ....  ; cd ../../.. ; end
+function ..... ; cd ../../../.. ; end
+function ...... ; cd ../../../../.. ; end
+function ....... ; cd ../../../../../.. ; end
