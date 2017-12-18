@@ -1,3 +1,5 @@
+# Thanks @gf3
+
 function fish_prompt
   printf " \n"
   set_color magenta
