@@ -24,5 +24,10 @@ function ..... ; cd ../../../.. ; end
 function ...... ; cd ../../../../.. ; end
 function ....... ; cd ../../../../../.. ; end
 
+# https://stackoverflow.com/a/6127884/1104036
+function git-delete-merged-branches
+  git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+end
+
 # Show hidden files in fzf, along with some other defaults
 set --export FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
