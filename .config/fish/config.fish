@@ -29,5 +29,12 @@ function git-delete-merged-branches
   git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 end
 
+# https://stackoverflow.com/a/12142066/1104036
+function git-current-branch
+  git rev-parse --abbrev-ref HEAD
+end
+
 # Show hidden files in fzf, along with some other defaults
-set --export FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
+# set --export FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
+
+
