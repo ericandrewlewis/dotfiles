@@ -141,3 +141,6 @@ let g:ale_fixers = {
 
 " Enable JSX syntax highlighting in .js files
 let g:jsx_ext_required = 0
+
+" Show the cursor position at the bottom of the screen
+set ruler
