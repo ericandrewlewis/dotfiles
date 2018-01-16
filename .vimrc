@@ -3,8 +3,10 @@ call plug#begin('~/.vim/plugged')
 
 " Control spaces/tabs and indentation via editorconfig files
 Plug 'editorconfig/editorconfig-vim'
-" File explorer. Maybe remove? I don't use it...
+
+" File tree explorer
 Plug 'scrooloose/nerdtree'
+
 " JavaScript syntax highlighting and indentation assistance. This includes
 " vim-javascript
 Plug 'mxw/vim-jsx'
@@ -23,9 +25,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'joshdick/onedark.vim'
 
 " Asynchronous Lint Engine
-" I can't use this until we update our ESLint dependencies, there's something
-" wrong with them.
 Plug 'w0rp/ale'
+
 call plug#end()
 
 colorscheme onedark
