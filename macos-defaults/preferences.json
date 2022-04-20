@@ -1,0 +1,15 @@
+{
+    "Capitalize words automatically": "disable",
+    "Add period with double-space": "disable",
+    "Correct spelling automatically": "disable",
+    "Use smart quotes and dashes": "disable",
+    "Display the Finder \"Quit\" option": "enable",
+    "Show file extensions in the Finder": "enable",
+    "Show hidden files inside the Finder": "enable",
+    "Do not display the changing file extension warning":"enable",
+    "Use column view in all Finder windows by default": "enable",
+    "Autohide the dock": "enable",
+    "Disable animation when the dock appears and disappears": "enable",
+    "Do not display recent apps in the Dock": "enable",
+    "Display path bar in Finder window": "enable"
+}
